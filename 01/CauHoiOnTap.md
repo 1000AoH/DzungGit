@@ -22,4 +22,16 @@
 - Các params khác ngoài value: HTTP Methods (GET, POST, PATCH, PUT, DELETE), produces, headers, params, 
 
 **8. Ý nghĩa của @RequestResponse khi đặt trong hàm hứng request để làm gì?**
-- 
+- Để yêu cầu kết quả phản hồi từ sever 
+
+**9. Hãy trả lời khi nào thì dùng @PathVariable và khi nào nên dùng @RequestParam**
+- Cả 2 cách trên đều thực hiện chung một nhiệm vụ là lấy các tham số từ người dùng truyền lên trong URL. 
+- @PathVariable được sử dụng cho dữ liệu được truyền trong URL -> Phù hợp dịch vụ web RESTful nơi URL chưa value. @RequestParam được sử dụng để trích xuất dữ liệu được tìm thấy trong các tham số truy vấn -> phù hợp cho các web truyền thống nơi dữ liệu chủ yếu được chuyển vào các tham số truy vấn.
+
+**10. Thứ tự các thành phần đường dẫn @PathVariable có thể hoán đổi được không?**
+- Không thay đổi được, phải type đúng thứ tự.
+
+**11. @GetMapping khác gì so với @PostMapping?**
+- @Getmapping là chỉ báo thực hiện GET request, @PostMapping là chỉ báo thực hiện Post request.
+- GET và POST là hai loại yêu cầu HTTP khác nhau. GET được sử dụng để xem nội dung nào đó mà không cần thay đổi nội dung đó, trong khi POST được sử dụng để thay đổi nội dung nào đó.
+ 
