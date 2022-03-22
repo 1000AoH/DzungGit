@@ -35,3 +35,11 @@
 - @Getmapping là chỉ báo thực hiện GET request, @PostMapping là chỉ báo thực hiện Post request.
 - GET và POST là hai loại yêu cầu HTTP khác nhau. GET được sử dụng để xem nội dung nào đó mà không cần thay đổi nội dung đó, trong khi POST được sử dụng để thay đổi nội dung nào đó.
  
+**12. Trong các annotation @RequestMapping, @GetMapping, @PostMapping… có tham số produces = MediaType.XXXX ý nghĩa tham số này là gì?**
+- Để xác định các annotation request trên tạo ra giữ liệu kiểu gì.
+
+**13. Giải thích ý nghĩa của @RequestBody trong đoạn code dưới đây**
+- @RequestBody sẽ gửi thông tin bổ sung theo yêu cầu của máy chủ để xử lý Request Post hiện tại.
+
+**14. Cổng mặc định ứng dụng SpringBoot là 8080. Hãy google cách để thay đổi cổng lắng nghe mặc định**
+- Dùng command line gõ java -jar spring-(version).jar --server.port=8083 (cái này phải cài spring CLI trong máy)
