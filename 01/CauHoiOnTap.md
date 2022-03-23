@@ -5,7 +5,8 @@
 **2. Tại sao phải đảo ngược tên miền trong <groupId>vn.techmaster</groupId>?**
 - Phục vụ mục đích tìm kiếm toàn bộ dự án được phát triển bởi cùng 1 đối tượng (groupID).
 
-**3. SpringBoot có 2 cơ chế để quản lý thư viện. Hãy kể tên chúng?** EM CHƯA BIỂT
+**3. SpringBoot có 2 cơ chế để quản lý thư viện. Hãy kể tên chúng?** 
+- Maven và Gradle
 
 **4. File pom.xml có tác dụng gì?**
 
