@@ -43,7 +43,7 @@ public class HomeController {
       public String getQuote() {
             String[] x = { "Kiến tha lâu đầy tổ", "Có công mài sắt, có ngày nên kim", "Không thầy đố mày làm nên",
                         "Học thầy không tày học bạn" };
-            double y = Math.random() * 3;
+            double y = Math.random() * 4;
             return x[(int) y];
       }
 
