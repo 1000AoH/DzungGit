@@ -19,7 +19,7 @@ public class HomeController {
         joblist.put("04", new Job("04","Saleman","SALE Ed-tech, financial service", location.DaNang, 200, 700, "Dung@gmail.com"));
         joblist.put("05", new Job("05","Developer","Ecommerce", location.HaNoi, 1000, 2000, "Dung@gmail.com"));
     }
-
+    /* thêm sửa xóa lấy ra job */
     @GetMapping
     public List<Job> getAllJob(){
         return joblist.values().stream().collect(Collectors.toList());
@@ -39,7 +39,7 @@ public class HomeController {
         joblist.replace(id,job);
         return joblist.get(id);
     }
-
+    /* Sắp xết theo location */
     @GetMapping(value = "/sortbylocation")
     public List<Job> sortByLocation(){
         List<Job> mutableList = joblist.values().stream().collect(Collectors.toList());
@@ -51,7 +51,7 @@ public class HomeController {
         });
         return mutableList;
     }
-
+    /* Tìm job match khoảng lương */
     @GetMapping(value = "/salary/{salary}")
     public List<Job> findMatchSalary(@PathVariable("salary") int salary){
         List<Job> fullList = joblist.values().stream().collect(Collectors.toList());
@@ -65,7 +65,8 @@ public class HomeController {
 
         return matchList;
     }
-
+    
+    /* Tìm job theo keyword */
     @GetMapping(value = "/keyword/{keyword}")
     public List<Job> SEO(@PathVariable("keyword") String keyword){
         List<Job> fullList = joblist.values().stream().collect(Collectors.toList());
@@ -78,6 +79,7 @@ public class HomeController {
         }
         return matchList;
     }
+    /* Tìm job theo keyword và location */
     @GetMapping(value = "/query")
     public List<Job> MatchLocationAndKeyword(@RequestParam("keyword") String keyword, @RequestParam("location") String location){
         List<Job> fullList = joblist.values().stream().collect(Collectors.toList());
