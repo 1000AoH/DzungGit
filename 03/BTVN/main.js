@@ -25,8 +25,8 @@ function calculateFactorial(a) {
 
 function reverseString(a) {
   a = a.split("");
-  var len = a.length;
-  var temp = "";
+  let len = a.length;
+  let temp = "";
   for (let i = 0; i <= len / 2; i++) {
     temp = a[len - i - 1];
     a[len - i - 1] = a[i];
