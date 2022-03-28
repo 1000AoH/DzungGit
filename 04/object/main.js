@@ -76,4 +76,4 @@ function randomProduct(arr) {
 }
 console.log(randomProduct(products));
 
-// them khai bao' let arr2 = arr.map((value) => value); de khong bi anh huong den array products moi khi goi function
+//Chú ý thêm khai báo "let arr2 = arr.map((value) => value);" và "return arr2" vào các function để không bị ảnh hưởng (thêm sửa xóa phẩn tử) của array products mỗi khi gọi đến các function phía trước.
