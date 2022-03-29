@@ -26,6 +26,9 @@ let products = [
   },
 ];
 
+//CHÚ Ý thêm khai báo copy array "let arr2 = arr.map((value) => value);" và "return arr2" vào các function để không bị ảnh hưởng (thêm sửa xóa phẩn tử) của array products mỗi khi gọi đến các function phía trước.
+
+
 // 6. Thêm 1 sản phẩm bất kỳ vào trong mảng product
 
 function addProduct(arr, name, price, brand, count) {
@@ -35,16 +38,15 @@ function addProduct(arr, name, price, brand, count) {
 // 7. Xóa tất cả sản phẩm của thương hiệu "Samsung" trong giỏ hàng
 
 function deleteName(arr, brandName) {
-  let arr2 = arr.map((value) => value);
-  for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i].brand.toLowerCase() == brandName.toLowerCase()) {
-      arr2.splice(i, 1);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].brand.toLowerCase() == brandName.toLowerCase()) {
+      arr.splice(i, 1);
     }
   }
-  return arr2;
+  return arr;
 }
 
-console.log(deleteName(products, "Samsung"));
+// console.log(deleteName(products, "Samsung"));
 
 // 8. Sắp xếp giỏ hàng theo price tăng dần
 
@@ -76,4 +78,3 @@ function randomProduct(arr) {
 }
 console.log(randomProduct(products));
 
-//Chú ý thêm khai báo "let arr2 = arr.map((value) => value);" và "return arr2" vào các function để không bị ảnh hưởng (thêm sửa xóa phẩn tử) của array products mỗi khi gọi đến các function phía trước.
