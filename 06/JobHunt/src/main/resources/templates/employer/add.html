@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AddEmployers</title>
+    <style>
+        body {font-family: sans-serif; font-size: 14px}
+        h1 {color: darkblue;}
+        a {text-decoration: none}
+    </style>
+</head>
+<body>
+<h1>Create a Employer:</h1>
+<a href="/employer/list" >Employers list</a>
+<br></br>
+<form th:action="@{/employer/add}"
+      th:object="${employer}" method="POST">
+    Name:</br><input type="text" th:field="*{name}"/></br>
+    Website:</br><input type="text" th:field="*{website}"/></br>
+    Email:</br><input type="text" th:field="*{email}"/></br>
+    Address:</br><input type="text" th:field="*{address}"/></br>
+    </br><input type="submit" value="Create"/></br>
+
+</form>
+
+
+
+</body>
+<a href="/" style="margin-top: 15px; display: block">Back to Home Page</a>
+
+</html>

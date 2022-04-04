@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employer list</title>
+    <style>
+        body {font-family: sans-serif; font-size: 14px}
+        h1 {color: darkblue;}
+        a {text-decoration: none}
+        td { text-align: center}
+    </style>
+</head>
+<body>
+<h1> Employers List </h1>
+<a href="/employer/add">Add an employer</a>
+<br><br/>
+<table border="1" style="border-collapse: collapse; width: 30%">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Website</th>
+        <th>Email</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employer, iStat:${employers}">
+        <th scope="row" th:text="${iStat.index}+1"></th>
+        <td th:text="${employer.name}">Name</td>
+        <td th:text="${employer.website}">Website</td>
+        <td th:text="${employer.email}">Email</td>
+        <td th:text="${employer.address}">Address</td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/" style="margin-top: 15px; display: block">Back to Home Page</a>
+</body>
+</html>
