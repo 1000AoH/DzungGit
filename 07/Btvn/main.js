@@ -27,6 +27,7 @@ function addRemove() {
   for (let i = 0; i < divBoxes.length; i++) {
     divBoxes[i].addEventListener("click", function () {
       this.remove();
+      totalBoxes.innerText = `Total box: ${divBoxes.length}`;
     });
   }
 }
@@ -35,10 +36,11 @@ function addRemove() {
 
 moreBoxes.addEventListener("click", function () {
   createFiveColors();
+  totalBoxes.innerText = `Total box: ${divBoxes.length}`;
 });
 
 // Update totalBox đang hiển thị
 
-document.addEventListener("click", function () {
-  totalBoxes.innerText = `Total box: ${divBoxes.length}`;
-});
+// document.addEventListener("click", function () {
+//   totalBoxes.innerText = `Total box: ${divBoxes.length}`;
+// });
