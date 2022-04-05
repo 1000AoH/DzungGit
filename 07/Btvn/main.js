@@ -15,7 +15,6 @@ function createFiveColors() {
   for (let i = 0; i < colors.length; i++) {
     let x = document.createElement("div");
     x.className = "box";
-    x.setAttribute("onclick", "funciont(){this.remove()}");
     x.style.backgroundColor = colors[i];
     wrap.appendChild(x);
   }
